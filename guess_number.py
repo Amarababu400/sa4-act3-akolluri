@@ -7,8 +7,14 @@ while True:
     if guess.lower() == 'q':
         print(f"The number was {number}.")
         break
-    elif int(guess) == number:
-        print("Congratulations! You guessed the right number.")
-        break
-    else:
-        print("Try again!")
+    try:
+        guess = int(guess)
+        if guess == number:
+            print("Congratulations! You guessed the right number.")
+            break
+        elif guess < number:
+            print("Too low! Try again.")
+        else:
+            print("Too high! Try again.")
+    except ValueError:
+        print("Please enter a valid number.")
