@@ -17,8 +17,11 @@ while attempts > 0:
             print("Too low! Try again.")
         else:
             print("Too high! Try again.")
+<<<<<<< HEAD
         attempts -= 1
         if attempts == 0:
             print(f"Game over! The number was {number}.")
+=======
+>>>>>>> guess-hints
     except ValueError:
         print("Please enter a valid number.")
